@@ -1,0 +1,68 @@
+.tagsContainer {
+  display: flex;
+  width: 100%;
+  margin-right: 130px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  .desktop {
+    flex-shrink: 0;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+  .mobile {
+    flex-shrink: 0;
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.filterTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  background: #1963aa;
+  white-space: nowrap;
+  height: 32px;
+  flex-shrink: 0;
+  @media (max-width: 1024px) {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0px 12px;
+    height: 24px;
+  }
+}
+
+.filterClearTag {
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #c72944;
+  border: 1px solid #f2c9d0;
+  white-space: nowrap;
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    padding: 0px 12px;
+    height: 24px;
+  }
+}
+
+.closeIcon {
+  margin-left: 4px;
+  cursor: pointer;
+}

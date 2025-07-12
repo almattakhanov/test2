@@ -1,0 +1,393 @@
+
+.productBlock {
+  padding-top: 24px;
+  position: relative;
+
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+  gap: 8px;
+}
+
+.loaderContainer1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaderContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  animation: rotate 2s linear infinite;
+  transform-origin: center center;
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.productCard {
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 40px;
+  margin-left: 0px;
+
+  @media (min-width: 1000px) {
+    &:hover {
+      .productImage {
+        scale: 1.1;
+      }
+
+      //border-radius: 12px;
+      //box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.favoriteButton {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s;
+
+  @media (hover: hover) and (pointer: fine) {
+    transition: all 0.3s;
+    &:hover {
+      .favoriteIcon {
+        path {
+          stroke: #C72944;
+        }
+      }
+    }
+  }
+}
+
+.favoriteIcon {
+  // width: 32px;
+  // height: 32px;
+
+  transition: all 0.3s;
+
+  &.active {
+    path {
+      stroke: #C72944;
+      fill: #C72944;
+    }
+  }
+}
+
+.imageContainer {
+  position: relative;
+  //height: 200px;
+  // background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+
+  .image {
+    width: 100%;
+  }
+
+}
+
+.imagePlaceholder {
+  width: 224px;
+  height: 273px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: scale 0.3s ease;
+}
+
+.saleBadge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0 8px;
+  width: 99px;
+  height: 24px;
+  background: #31b301;
+  display: flex;
+  align-items: center;
+}
+
+.discountBadge {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0 8px;
+  width: 48px;
+  height: 24px;
+  background: #c72944;
+  display: flex;
+  align-items: center;
+}
+
+.installmentBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  background: #ff850f;
+  padding: 4px 8px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+
+  border-radius: 6px;
+  //width: 131px;
+  height: 24px;
+  @media (max-width: 546px) {
+    display: none;
+  }
+}
+
+.installmentBadgeMob {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  background: #ff850f;
+  padding: 4px 8px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+
+  border-radius: 6px;
+  //width: 131px;
+  height: 24px;
+  @media (min-width: 546px) {
+    display: none;
+  }
+}
+
+.productInfo {
+  flex: 1 1 auto;
+  padding: 17px;
+  @media (max-width: 546px) {
+    padding: 6px;
+  }
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.currentPrice {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 120%;
+  color: #344153;
+
+  &.discountedPrice {
+    color: #c72944;
+  }
+
+  @media (max-width: 546px) {
+    font-size: 16px;
+  }
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: #868696;
+  @media (max-width: 546px) {
+    font-size: 12px;
+  }
+}
+
+.installment {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 143%;
+  gap: 4px;
+  margin-bottom: 4px;
+
+  .installmentValue {
+    font-family: var(--font-family);
+    font-weight: 600;
+    text-align: center;
+    color: #f70;
+    border-radius: 8px;
+    padding: 2px 6px;
+    width: 68px;
+    height: 24px;
+    background: #fff2e6;
+  }
+
+  .quantity {
+    font-family: var(--font-family);
+    font-weight: 500;
+    text-align: center;
+    color: #868696;
+  }
+}
+
+
+.productTitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Количество строк */
+  -webkit-box-orient: vertical;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #344153;
+
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .ratingIcon {
+
+    }
+
+    .ratingText {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      color: #344153;
+    }
+  }
+}
+
+.reviews {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #868696;
+}
+
+.loadMoreTrigger {
+  height: 1px; /* Занимает минимальную высоту */
+  width: 100%; /* По ширине контейнера */
+  opacity: 0; /* Полностью прозрачный */
+  pointer-events: none; /* Не мешает взаимодействию */
+}
+
+.addToCartButton {
+  width: 100%;
+  background: #1963aa;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  border-radius: 8px;
+  padding: 10px 16px;
+
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      a {
+        color: #3052BD;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+    padding: 0 16px;
+  }
+}

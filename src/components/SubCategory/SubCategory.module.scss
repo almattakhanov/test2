@@ -1,0 +1,62 @@
+//.wrapper {
+//}
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  width: auto !important; // Чтобы ширина зависела от содержимого
+  flex-shrink: 0; // Запрещаем сжиматься
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.categoryButton {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #344153;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 8px 40px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+  background: #fff;
+  transition: all 0.2s ease;
+
+    @media (max-width: 546px) {
+    font-size: 14px;
+  }
+  &:hover {
+    background: #f5f5f5;
+    color: #344153;
+  }
+}
+
+.wrapper {
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+.scrollContainer {
+ // display: flex;
+  gap: 16px;
+ // overflow-x: auto;
+ // -webkit-overflow-scrolling: touch; // плавная прокрутка на iOS
+ // scrollbar-width: none; // Firefox
+}
+
+.scrollContainer::-webkit-scrollbar {
+ // display: none; // Chrome/Safari
+}
+
+.slide {
+ // flex-shrink: 0; // важно: не даёт элементам сжиматься
+}
+
+.categoryButton {
+ // white-space: nowrap; // чтобы текст не переносился
+}

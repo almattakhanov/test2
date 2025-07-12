@@ -1,0 +1,52 @@
+.main {
+  padding-top: 100px;
+  margin-bottom: 50px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  color: #222;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.downloadLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: #3052BD;
+
+      svg {
+        path {
+          stroke: #3052BD;
+        }
+      ;
+      }
+    }
+  }
+}

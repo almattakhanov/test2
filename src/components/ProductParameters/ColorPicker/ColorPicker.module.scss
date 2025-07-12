@@ -1,0 +1,49 @@
+.parametersBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .subTitle {
+    font-weight: 500;
+    font-size: 16px;
+    color: #344153;
+  }
+
+}
+
+.colorSwatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+}
+
+
+
+.segmentedWrapper {
+  :global {
+    .ant-segmented {
+      background: none;
+    }
+
+    .ant-segmented .ant-segmented-group {
+      gap: 8px;
+    }
+
+    .ant-segmented-item {
+      border: 2px solid #d6d6d6;
+      border-radius: 8px;
+    }
+
+    .ant-segmented-item-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ant-segmented-item-selected {
+      border: 2px solid #1963aa;
+      border-radius: 8px;
+    }
+  }
+}

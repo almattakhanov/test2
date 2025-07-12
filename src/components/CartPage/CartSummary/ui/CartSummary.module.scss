@@ -1,0 +1,133 @@
+.summaryBox {
+  flex: 1;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  min-width: 280px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+  max-width: 440px;
+
+  @media (max-width: 1024px) {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  h3 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    color: #344153;
+    margin-bottom: 20px;
+  }
+}
+
+.summaryLines {
+  .summaryLine {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 16px;
+
+    span {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: #868696;
+    }
+
+    .total {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 16px;
+      color: #344153;
+    }
+
+    .discount {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 16px;
+      color: #c62946;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.line {
+  border: 1px solid #d0d5dc;
+  width: 100%;
+  height: 0;
+  margin-bottom: 20px;
+}
+
+.summaryLineTotal {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  color: #344153;
+  margin-bottom: 12px;
+}
+
+.monthly {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #868696;
+  }
+
+  span {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    color: #f70;
+  }
+}
+
+.checkout {
+  width: 100%;
+  background: #1963aa;
+  border: none;
+  margin-bottom: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0 24px;
+  height: 56px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+
+  &.disabled {
+    opacity: 0.6;
+  }
+}
+
+.deliveryInfo {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #868696;
+}
+
+@media (max-width: 768px) {
+  .summaryBox {
+    width: 100%;
+  }
+}

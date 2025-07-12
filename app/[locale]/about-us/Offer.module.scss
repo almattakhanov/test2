@@ -1,0 +1,42 @@
+.main {
+  padding-top: 100px;
+  margin-bottom: 50px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.paragraph {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}

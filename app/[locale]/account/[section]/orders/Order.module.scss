@@ -1,0 +1,348 @@
+.ordersWrapper {
+  margin-left: 88px;
+
+  @media (max-width: 1322px) {
+    margin-left: 40px;
+  }
+
+  @media (max-width: 1268px) {
+    margin-left: 40px;
+  }
+
+  @media (max-width: 1093px) {
+    margin-left: 0;
+  }
+
+  .title {
+    margin-bottom: 24px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 28px;
+    color: #344153;
+
+    @media (max-width: 670px) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 426px) {
+      font-size: 20px;
+    }
+
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .tableWrapper {
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #9e9e9e;
+    padding: 0 16px 12px;
+    justify-content: space-between;
+
+    .colOrder {
+      min-width: 150px;
+      max-width: 150px;
+
+      @media (max-width: 1220px) {
+        min-width: 80px;
+        max-width: 80px;
+      }
+      @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .colDate {
+      min-width: 139px;
+      max-width: 139px;
+      @media (max-width: 1220px) {
+        min-width: 100px;
+        max-width: 100px;
+      }
+      @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+    }
+
+    .colStatus {
+      min-width: 160px;
+      max-width: 160px;
+      @media (max-width: 1220px) {
+        min-width: 125px;
+        max-width: 125px;
+      }
+      @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .colPrice {
+      min-width: 140px;
+      max-width: 140px;
+      @media (max-width: 1220px) {
+        min-width: 100px;
+        max-width: 100px;
+      }
+      @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .colQuantity {
+      min-width: 118px;
+      max-width: 118px;
+      @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .colAction {
+      min-width: 40px;
+      max-width: 40px;
+      @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    span {
+      white-space: nowrap;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 12px;
+      color: #868696;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    padding: 8px 16px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 1220px) {
+      gap: 0;
+      padding: 8px 8px;
+    }
+
+    @media (max-width: 769px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+
+      .buttonText {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        color: #868696;
+      }
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+
+    }
+  }
+
+  .col {
+    flex-shrink: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.colOrder {
+      min-width: 150px;
+      max-width: 150px;
+
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 16px;
+      color: #344153;
+
+      @media (max-width: 1390px) {
+        min-width: 100px;
+        max-width: 100px;
+      }
+
+      @media (max-width: 1220px) {
+        min-width: 80px;
+        max-width: 80px;
+      }
+      @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &.colDate {
+      min-width: 139px;
+      max-width: 139px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: #868696;
+
+      @media (max-width: 1390px) {
+        min-width: 100px;
+        max-width: 100px;
+      }
+      @media (max-width: 1220px) {
+        min-width: 100px;
+        max-width: 100px;
+        @media (max-width: 768px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    &.colStatus {
+      min-width: 160px;
+      max-width: 160px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      @media (max-width: 1390px) {
+        min-width: 100px;
+        max-width: 100px;
+      }
+      @media (max-width: 1220px) {
+        min-width: 125px;
+        max-width: 125px;
+      }
+      @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &.colPrice {
+      min-width: 140px;
+      max-width: 140px;
+
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 16px;
+      color: #344153;
+      @media (max-width: 1220px) {
+        min-width: 100px;
+        max-width: 100px;
+      }
+      @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &.colQuantity {
+      min-width: 118px;
+      max-width: 118px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: #868696;
+      @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &.colAction {
+      min-width: 40px;
+      max-width: 40px;
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+    }
+
+
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+
+      &::before {
+        content: attr(data-label);
+        margin-right: 8px;
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        color: #868696;
+      }
+    }
+  }
+
+  .status {
+    &_paid {
+      color: #28a745;
+      font-weight: 500;
+    }
+
+    &_pending_payment {
+      color: #f44336;
+      font-weight: 500;
+    }
+
+    &_delivered {
+      color: #1c1c1c;
+      font-weight: 500;
+    }
+  }
+
+  .icon {
+    border-radius: 27px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 7px 33px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      align-self: flex-end;
+      margin-top: 12px;
+    }
+  }
+}

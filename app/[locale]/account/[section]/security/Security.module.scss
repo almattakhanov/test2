@@ -1,0 +1,43 @@
+.wrapper {
+  width: 100%;
+  max-width: 380px;
+  margin-left: 88px;
+
+  @media (max-width: 906px) {
+    margin-left: 40px;
+  }
+
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 28px;
+    color: #344153;
+    margin-bottom: 20px;
+
+    @media (max-width: 670px) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 426px) {
+      font-size: 20px;
+    }
+  }
+
+
+  .button {
+    width: 100%;
+    color: white;
+    background-color: #0074e6;
+    opacity: 0.5;
+    cursor: not-allowed;
+    transition: all 0.2s ease;
+  }
+
+}
+

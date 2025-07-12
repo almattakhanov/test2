@@ -1,0 +1,39 @@
+import type {Metadata} from "next";
+import {Roboto} from 'next/font/google';
+import "../assets/styles/globals.css";
+import "@radix-ui/themes/styles.css";
+import {Theme} from "@radix-ui/themes";
+import {APP_DESCRIPTION, APP_NAME} from "@/src/lib/constants";
+
+const roboto = Roboto({
+    subsets: ['latin'],
+    weight: ['400', '500', '700'],
+    variable: '--font-roboto'
+});
+
+
+export const metadata: Metadata = {
+    title: {
+        template: `%s | ${APP_NAME}`,
+        default: APP_NAME,
+    },
+    description: APP_DESCRIPTION,
+    // metadataBase: new URL(APP_URL),
+};
+
+export default function RootLayout(
+    {
+        children,
+    }: Readonly<{
+        children: React.ReactNode;
+    }>) {
+    return (
+        <html lang="en">
+        <Theme>
+            <body className={`${roboto.variable}`}>
+            {children}
+            </body>
+        </Theme>
+        </html>
+    );
+}

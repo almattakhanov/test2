@@ -1,0 +1,286 @@
+.card {
+  position: relative;
+  cursor: pointer;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .image {
+        scale: 1.05;
+      }
+      .addToCart {
+        background: #3052BD;
+      }
+    }
+  }
+
+  .favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    z-index: 10;
+
+    path {
+      stroke: #C72944;
+      fill: #C72944;
+    }
+  }
+
+  .imageWrapper {
+    position: relative;
+    display: block;
+    //width: fit-content;
+    //height: fit-content;
+    overflow: hidden;
+    margin-bottom: 12px;
+
+
+    .image {
+      transition: scale 0.5s ease;
+      object-fit: cover;
+      background-color: transparent;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 702px) {
+      .image {
+        width: 157px;
+        height: 200px;
+      }
+    }
+
+
+    .installment {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: #ff850f;
+      padding: 4px 8px;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 6px;
+      height: 24px;
+
+      @media (max-width: 702px) {
+        font-size: 12px;
+      }
+
+      span {
+        @media (max-width: 702px) {
+          display: none;
+        }
+      }
+    }
+
+
+    .discount {
+      position: absolute;
+      bottom: 40px;
+      left: 10px;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0 8px;
+      width: 48px;
+      height: 24px;
+      background: #c72944;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 702px) {
+        font-size: 12px;
+      }
+    }
+
+    .sale {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0 8px;
+      width: 99px;
+      height: 24px;
+      background: #31b301;
+      display: flex;
+      align-items: center;
+      @media (max-width: 702px) {
+        font-size: 12px;
+      }
+    }
+
+  }
+
+  .title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #344153;
+    max-width: 208px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     /* Количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+
+    @media (max-width: 702px) {
+      max-width: 100%;
+      white-space: wrap;
+
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  .priceContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+
+
+    .currentPrice {
+      font-family: var(--font-family);
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 120%;
+      color: #344153;
+
+      @media (max-width: 702px) {
+        font-family: var(--font-family);
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 125%;
+        color: #c72944;
+      }
+
+      &.discountedPrice {
+        color: #c72944;
+      }
+    }
+
+    .oldPrice {
+      text-decoration: line-through;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 143%;
+      color: #868696;
+
+      @media (max-width: 702px) {
+        font-size: 12px;
+      }
+
+    }
+  }
+
+  .installmentPrice {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 12px;
+
+    .installmentValue {
+      text-align: center;
+      border-radius: 8px;
+      padding: 2px 6px;
+      background: #fff2e6;
+
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 143%;
+      color: #f70;
+
+      @media (max-width: 702px) {
+        font-size: 12px;
+        line-height: 133%;
+        text-align: center;
+      }
+    }
+
+    .quantity {
+      font-family: var(--font-family);
+      font-weight: 500;
+      text-align: center;
+      color: #868696;
+
+      @media (max-width: 702px) {
+        font-size: 12px;
+        line-height: 133%;
+      }
+    }
+  }
+
+  .ratingWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+
+    @media (max-width: 702px) {
+      gap: 4px;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      span {
+        @media (max-width: 702px) {
+          font-size: 20px;
+        }
+      }
+
+      .count {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        color: #344153;
+
+        @media (max-width: 702px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .feedback {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      color: #868696;
+
+      @media (max-width: 702px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .addToCart {
+    border-radius: 8px;
+    padding: 10px 0;
+    max-width: 208px;
+    width: 100%;
+    background: #1963aa;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.3s;
+    @media (max-width: 702px) {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.payment {
+  .title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    color: #344153;
+  }
+
+  .radioGroupContainer {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    margin-bottom: 32px;
+
+    @media (max-width: 425px) {
+      padding-top: 12px;
+      margin-bottom: 24px;
+    }
+
+    .radioGroup {
+      display: flex;
+      gap: 8px;
+
+      :global(.ant-radio-button-wrapper) {
+        font-family: var(--font-family);
+        border: 2px solid #d6d6d6;
+        border-radius: 8px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        color: #344153;
+        background-color: #fff;
+        transition: all 0.3s;
+
+        &:not(:first-child)::before {
+          display: none;
+        }
+      }
+
+      :global(.ant-radio-button-wrapper-checked) {
+        border-color: #1963aa !important;
+        background-color: #fff !important;
+        box-shadow: none;
+        z-index: 1;
+      }
+
+      :global(.ant-radio-button-wrapper-checked:hover) {
+        border-color: #1963aa !important;
+      }
+    }
+  }
+}

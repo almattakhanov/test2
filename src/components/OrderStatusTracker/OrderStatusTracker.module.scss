@@ -1,0 +1,97 @@
+.tracker {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .iconWrapper {
+    position: relative;
+    width: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #d1d1d1; // серый цвет по умолчанию
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+
+  .line {
+    position: absolute;
+    top: 8px;
+    height: 30px;
+    width: 2px;
+    background-color: #d1d1d1;
+    z-index: 1;
+  }
+
+  .label {
+    margin-left: 8px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #344153;
+  }
+}
+
+.completed {
+  .circle {
+    background-color: #1963aa; // синий
+    border-color: #1963aa;
+  }
+
+  .line {
+    background-color: #1963aa;
+  }
+
+  .label {
+    color: #344153;
+    font-weight: 400;
+  }
+}
+
+.active {
+  .circle {
+    background-color: #fff;
+    border-color: #1963aa;
+  }
+
+  .line {
+    background-color: #d1d1d1;
+  }
+
+  .label {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #868696;
+  }
+}
+
+.future {
+  .circle {
+    background-color: #dadada;
+  }
+
+  .line {
+    background-color: #dadada;
+  }
+
+  .label {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #dadada;
+  }
+}

@@ -1,0 +1,27 @@
+.selectAll {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  .selectContainer {
+    display: flex;
+    gap: 12px;
+
+    .text {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16px;
+      color: #344153;
+    }
+  }
+
+  .deleteSelected {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    text-align: right;
+    color: #c62946;
+  }
+}

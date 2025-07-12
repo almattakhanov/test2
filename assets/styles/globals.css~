@@ -1,0 +1,91 @@
+
+
+:root {
+    --font-family: "Roboto", sans-serif;
+    /*--color-primary: #e9e2bf;*/
+    /*--color-secondary: #cbac77;*/
+    /*--color-tertiary: #8c8c7e;*/
+    /*--color-hover: #d2b934;*/
+    /*--color-border: var(--color-border);*/
+    /*--background-blur: rgba(0, 0, 0, 0.3);*/
+}
+
+
+
+
+html {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+
+input,
+button,
+textarea {
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+    background-color: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration-line: none !important;
+    transition: all 0.3s;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    font-family: var(--font-family), serif;
+    font-weight: 400;
+    font-size: 14px;
+}

@@ -1,0 +1,240 @@
+.banners {
+  padding-top: 56px;
+
+
+  @media (max-width: 1024px) {
+    padding-top: 40px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #333;
+  }
+
+}
+
+
+.sideBanners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+
+  @media (max-width: 1024px) {
+    gap: 14px;
+  }
+}
+
+.sideBanner {
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 200px;
+  overflow: hidden;
+  width: 100%;
+
+
+  &.black {
+    background: #2a2a2a;
+  }
+
+  &.red {
+    background: #c62946;
+  }
+
+  &.blue {
+    background: #0074e6;
+  }
+
+
+  .sideImage {
+    position: absolute;
+    right: 24px;
+    bottom: -30px;
+    height: 80%;
+    width: auto;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+.button {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: #344153;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.smallButton {
+  @extend .button;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.sideTitle {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.sideText {
+  position: absolute;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  z-index: 3;
+}
+
+@media (max-width: 1024px) {
+  .sideBanner {
+    padding: 16px;
+
+    .sideTitle {
+      font-size: 20px;
+    }
+
+    .sideText {
+      font-size: 14px;
+    }
+
+    .sideImage {
+      position: absolute;
+      right: 48px;
+      bottom: -30px;
+      height: 100%;
+      width: auto;
+    }
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .sideBanners {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .mobileBanner {
+    background: linear-gradient(180deg, #003ba0 0%, #002e5b 100%);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 200px;
+    overflow: hidden;
+
+    &.black {
+      background: #2a2a2a;
+    }
+
+    &.black {
+      background: #2a2a2a;
+    }
+
+    &.red {
+      background: #c62946;
+    }
+
+    &.blue {
+      background: #0074e6;
+    }
+
+    .mobileImage {
+      position: absolute;
+      right: 24px;
+      bottom: 0;
+      height: 60%;
+      width: auto;
+    }
+
+    .mobileSideImage {
+      position: absolute;
+      right: 24px;
+      bottom: -30px;
+      height: 80%;
+      width: auto;
+    }
+  }
+
+  .mobileButton {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: #344153;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 16px;
+  }
+
+  .mobileSmallButton {
+    @extend .mobileButton;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .mobileTitle {
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .mobileSubtitle {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .mobileSideTitle {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .mobileSideText {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}

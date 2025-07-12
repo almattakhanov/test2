@@ -1,0 +1,53 @@
+import styles from './Presentation.module.scss'
+import Link from "next/link";
+import Image from 'next/image'
+
+export const Presentation = () => {
+    return (
+        <div className={styles.parent}>
+            <div className={styles.div1}>
+                <div className={styles.content}>
+                    <h2 className={styles.title}>Новый iPhone 16e уже в продаже</h2>
+                    <p className={styles.description}>Все что нужно!</p>
+                    <Link href={'#'} className={styles.badge}>
+                        <span>Подробнее</span>
+                    </Link>
+                </div>
+                <Image
+                    src="/presentation/bigPhone.png"
+                    alt="Новый iPhone 16e"
+                    width={431}
+                    height={431}
+                    className={styles.bigPhone}
+                    priority // Для приоритетной загрузки главного изображения
+                />
+            </div>
+            <div className={styles.div2}>
+                <div className={styles.content}>
+                    <h2 className={styles.subTitle}>Акция на смартфоны</h2>
+                    <p className={styles.description}>При покупке смартфона наушники в подарок</p>
+                    <Link href={'#'} className={styles.badge}>
+                        <span>Подробнее</span>
+                    </Link>
+                </div>
+                <Image
+                    src="/presentation/littlePhone.png"
+                    alt="Акционный смартфон"
+                    width={153}
+                    height={187}
+                    className={styles.littlePhone}
+                />
+            </div>
+            <div className={styles.div3}>
+                <div className={styles.content}>
+                    <h2 className={styles.subTitle}>Акция на смартфоны</h2>
+                    <p className={styles.description}>При покупке смартфона
+                        наушники в подарок</p>
+                    <Link href={'#'} className={styles.badge}>
+                        <span>Подробнее</span>
+                    </Link>
+                </div>
+            </div>
+        </div>
+    );
+};

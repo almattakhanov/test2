@@ -1,0 +1,41 @@
+.wrapper {
+  padding-top: 112px;
+  margin-bottom: 80px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  .titleLink {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: fit-content;
+
+    &:hover .backIcon {
+      opacity: 0.8;
+    }
+  }
+
+  .titleContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 24px;
+
+  }
+
+  .backIcon {
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+  }
+
+  .pageTitle {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 28px;
+    color: #344153;
+  }
+
+
+}

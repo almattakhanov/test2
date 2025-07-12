@@ -1,0 +1,28 @@
+.sortOptions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: #f7f7f7;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.button {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  color: #344153;
+  transition: background 0.2s ease;
+}
+
+.active {
+box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+background: #fff;
+}

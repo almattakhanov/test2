@@ -1,0 +1,108 @@
+.swiperContNew {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ // max-width: 450px;
+
+  .prPagasw1 {
+  //  max-width: 350px;
+    max-height: 480px;
+
+      .prPagasw1Slade {
+        max-width: 72px;
+      }
+
+  }
+}
+
+.blockWrapper {
+  margin-bottom: 80px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.miniSwipBlock {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+
+
+
+  .lineCart {
+    border: 1px solid #d0d5dc;
+    width: 100%;
+    height: 0;
+    margin-bottom: 56px;
+    margin-top: 55px;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.pageWrapper {
+  padding-top: 112px;
+
+  @media (max-width: px) {
+    padding-top: 96px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 24px;
+    //height: 24px;
+  }
+
+  .pageContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    .pageBlocks {
+      max-width: 904px;
+
+
+      .productContent {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 40px;
+
+        @media (max-width: 953px) {
+          flex-direction: column;
+        }
+      }
+
+      .productContent :global(.pageSlider) {
+        flex: 1;
+        max-width: 50%;
+      }
+
+      .productContent :global(.productParameters) {
+        flex: 1;
+        max-width: 50%;
+      }
+    }
+  }
+
+  .spacer {
+    width: 324px;
+  }
+
+}
+
+
+.line {
+  border: 1px solid #d0d5dc;
+  width: 100%;
+  height: 0;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+

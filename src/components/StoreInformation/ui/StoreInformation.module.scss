@@ -1,0 +1,38 @@
+.wrapper {
+  max-width: 324px;
+  width: 100%;
+
+  @media (max-width: 1343px) {
+    display: none;
+    max-width: 100%;
+  }
+
+
+
+
+  .selContainer {
+    margin-bottom: 20px;
+
+    :global {
+      .ant-segmented-item-label {
+        padding: 2px 8px;
+      }
+    }
+  }
+
+  .selectContainer {
+    :global {
+      .ant-segmented-item-label {
+        padding: 2px 8px;
+      }
+    }
+  }
+
+}
+
+
+.moduleWrapper {
+  display: block;
+  max-width: 296px;
+}
+

@@ -1,0 +1,133 @@
+.bannerContainer {
+//  width: 100%;
+  //position: relative;
+  //aspect-ratio: 1368 / 250;
+  overflow: hidden;
+//  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+  margin-top: 56px;
+  margin-bottom: 56px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+
+  .content {
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+    background: #003580;
+    gap: 0;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+    .textBlock {
+      display: flex;
+      flex-direction: column;
+      padding: 63px 20px 63px 40px;
+
+      @media (max-width: 768px) {
+        padding: 43px 16px;
+      }
+
+      .title {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 100%;
+        color: #fff;
+        margin-bottom: 12px;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          line-height: 125%;
+          margin-bottom: 8px;
+        }
+      }
+      .subTitle {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #fff;
+        margin-bottom: 24px;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          line-height: 129%;
+        }
+      }
+      .button {
+        display: flex;
+        align-self: flex-start;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        color: #344153;
+        padding: 10px 54px;
+        border-radius: 8px;
+        background: #fff;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            background: #3052BD;
+            color: #fff;
+          }
+        }
+      }
+
+    }
+  }
+
+
+  
+  //.bannerLink {
+  //  display: block;
+  //  width: 100%;
+  //  height: 100%;
+  //}
+
+  .bannerImage {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    object-position: left;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    .gradient {
+      position: absolute;
+      left: -5px;
+      width: 351px;
+      height: 100%;
+      background: linear-gradient(90deg, #003580 0%, rgba(0, 53, 128, 0.1) 100%);      z-index: 10;
+
+      @media (max-width: 1025px) {
+        width: 180px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+    }
+
+  }
+}
+

@@ -1,0 +1,298 @@
+.panel {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 30px;
+}
+.filterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+
+
+}
+
+.titleFilter {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #344153;
+}
+
+.priceInputs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.brendsBlock {
+  max-height: 150px;
+  overflow: auto;
+ // padding-bottom: 20px;
+ // border-bottom: 1px solid red;
+
+}
+.borderBottom {
+  border-bottom: 1px solid #EAEBEB !important;
+  border-radius: 0 !important;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  z-index: 150;
+}
+.line {
+  border: 1px solid #EAEBEB;
+  width: 100%;
+  height: 0;
+  //margin-bottom: 10px;
+  margin-top: 20px;
+}
+.brandCheckboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+.brands {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.colors {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.priceInput {
+  display: flex;
+  border: 1px solid #e1e2e7;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0px 12px;
+  background: #f3f3f3;
+  width: 104px;
+  height: 48px;
+}
+.priceSlider {
+  color: #1963aa;
+}
+.credit {
+  display: flex;
+  justify-content: space-between;
+}
+.creditLabel {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: #344153;
+  margin-bottom: 16px;
+}
+.colorBox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.showMore {
+  margin-top: 4px;
+  color: #1677ff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filterToggle {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  box-shadow: none;
+}
+
+.sortPanel {
+  padding: 16px;
+}
+
+.sortPanelButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  width: 100%;
+  padding: 2px 4px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #868696;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-align: left;
+}
+
+.button:hover {
+  background: #e2e2e2;
+}
+
+.sortToggle {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  box-shadow: none;
+}
+.divider {
+  border: 1px solid #eaebeb;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.filterHeaderMobile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 8px;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.desktopLayout {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopLayout {
+    display: flex;
+    gap: 24px;
+  }
+
+  .sidebar {
+    width: 280px;
+    flex-shrink: 0;
+  }
+
+  .sidebarRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .selectedFilters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .selectedFiltersMob {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: start;
+    gap: 8px;
+    @media (min-width: 546px) {
+      display: none;
+    }
+  }
+
+  .filterTag {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+  }
+  .filterClearTag {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #f2c9d0;
+    border-radius: 8px;
+    padding: 0px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #c72944;
+  }
+  .mobileDrawer {
+    display: none;
+  }
+
+  .filterToggle {
+    display: none;
+  }
+  .sortToggle {
+    display: none;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.desktopSidebar {
+  display: block;
+  width: 280px;
+  flex-shrink: 0;
+  z-index: 50;
+
+  @media (max-width: 1024px) {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    position: absolute;
+    transition: all 0.3s ease;
+    overflow: auto;
+    height: 100%;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+
+
+    &.activeFilter {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+
+    }
+  }
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.desktopControls {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.paginationWrap {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}

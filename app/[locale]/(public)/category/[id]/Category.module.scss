@@ -1,0 +1,30 @@
+.breadcrumbs {
+  margin-top: 112px;
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-weight: 700;
+  font-size: 28px;
+  color: #344153;
+  text-align: start;
+  margin-bottom: 1rem;
+    @media (max-width: 546px) {
+    font-size: 20px;
+  }
+  .pageTitleCount {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: #868696;
+    margin-left: 12px;
+    @media (max-width: 546px) {
+    font-size: 12px;
+  }
+  }
+}
+.subCategoryContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}

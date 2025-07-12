@@ -1,0 +1,52 @@
+export const categories = [
+    {
+        title: 'Смартфоны и гаджеты',
+        image: '/categoryNav/smartphones.png',
+        slug: 'smartphones',
+    },
+    {
+        title: 'Компьютеры и ноутбуки',
+        image: '/categoryNav/computers.png',
+        slug: 'computers',
+    },
+    {
+        title: 'Бытовая техника',
+        image: '/categoryNav/homeAppliances.png',
+        slug: 'home-appliances',
+    },
+    {
+        title: 'Красота и здоровье',
+        image: '/categoryNav/beautiful.png',
+        slug: 'beauty',
+    },
+    {
+        title: 'Одежда и обувь',
+        image: '/categoryNav/clothing.png',
+        slug: 'clothing',
+    },
+    {
+        title: 'Все для дома',
+        image: '/categoryNav/theHome.png',
+        slug: 'home',
+    },
+    {
+        title: 'Смартфоны и гаджеты',
+        image: '/categoryNav/smartphones.png',
+        slug: 'smartphones',
+    },
+    {
+        title: 'Компьютеры и ноутбуки',
+        image: '/categoryNav/computers.png',
+        slug: 'computers',
+    },
+    {
+        title: 'Бытовая техника',
+        image: '/categoryNav/homeAppliances.png',
+        slug: 'home-appliances',
+    },
+    {
+        title: 'Красота и здоровье',
+        image: '/categoryNav/beautiful.png',
+        slug: 'beauty',
+    },
+]
